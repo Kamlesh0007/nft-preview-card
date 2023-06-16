@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:  #0D1A2D;
+    font-family: 'Outfit', sans-serif;
+  }
+  .container{
+    max-width: 350px;
+    display: flex;
+  flex-direction: column;
+  padding: 1.56rem;
+  background: linear-gradient(161.11deg, #13396b -0.73%, rgba(21, 39, 63, 0.3) 101.82%);
+  border-radius: 15px;
+  border: 0.5px solid #00000000;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+  transition: ease-in-out 0.8s;
+  transform: scale(1);
+  animation: moveIn 1.5s ease;
+
+  }
+  .card{
+    height: 300px;
+
+    background: url("images/image-equilibrium.jpg");
+    background-size: cover;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+
+  .card_img{
+    opacity: 0;
+  }
+.card:hover>img {
+  opacity: 1;
+  transform: scale(150%);
+ transition: ease-out transform .8s;
+}
+.card:hover {
+  box-shadow: 0 320px hsla(178, 100%, 50%, .5) inset;
+  transition: ease-out transform .8s;
+}
+  @keyframes moveIn {
+    0% {
+      filter: saturate(2);
+      transform: scale(0.7);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: scale(1);
+      filter: saturate(1);
+    }
+  }
+
+
+  h1{
+    font-size: 1.25rem;
+  font-weight: 700;
+  padding-top: 32px;
+  }
+  h1,a{
+    color: hsl(0, 0%, 100%);
+  }
+
+  .creator {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 18px;
+    padding-bottom: 16px;
+  }
+  
+  .creator h2 {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: hsl(215, 51%, 70%);
+  }
+h1:hover,a:hover {
+    color:hsl(178, 100%, 50%);
+  }
+  
+  .creator img {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    border: 1px solid hsl(0, 0%, 100%);
+    border-radius: 50px;
+  }
+  .creator img:hover{
+    border: 1px solid hsl(178, 100%, 50%);
+  } 
+  p{
+    padding-top: 20px;
+    color: hsl(215, 51%, 70%);
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+.time p{
+    padding: 0;
+    color: hsl(215, 51%, 70%);
+    margin-left: 3px;
+}
+.price p{
+    color: hsl(178, 100%, 50%);
+    font-weight: 700;
+    padding: 0;
+
+
+}
+.price-time {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 20px 0;
+}
+
+
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 4px;
+
+}
+.time{
+    display: flex;
+    align-items: center;
+
+}
+
+.time img:hover {
+  transform: rotate(360deg);
+  transition: ease-in-out 0.8s;
+}
+
+@media (max-width: 375px){
+.container {
+    flex-wrap: wrap;
+    margin: 32px;
+}
+.card{
+  background-position: center;
+}
+}
