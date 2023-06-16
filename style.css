@@ -149,6 +149,23 @@ h1:hover,a:hover {
   transform: rotate(360deg);
   transition: ease-in-out 0.8s;
 }
+.attribution{
+  position: absolute;
+    bottom: 0.6em;
+    width: 100%;
+    text-align: center;
+    color: aliceblue;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+    align-items: center;
+}
+.attribution a {
+  color: hsl(315, 67%, 53%);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
 
 @media (max-width: 375px){
 .container {
@@ -157,5 +174,10 @@ h1:hover,a:hover {
 }
 .card{
   background-position: center;
+}
+.attribution{
+    font-size: 0.6rem;
+  gap: 0rem;
+  flex-wrap: wrap;
 }
 }
